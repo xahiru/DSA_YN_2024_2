@@ -16,5 +16,21 @@ Pseudo code:
             arr[i] = i + 1
         Return arr
 
+2. 
+    Function InsertElement(arr, element, position):
+        If position < 0 or position > length of arr:
+            Print "Invalid position"
+            Return arr
+
+        Create a new array `newArr` of size length of arr + 1
+        For i from 0 to position - 1:
+            newArr[i] = arr[i]
+        
+        newArr[position] = element
+
+        For i from position to length of arr - 1:
+            newArr[i + 1] = arr[i]
+
+        Return newArr
 
 */
