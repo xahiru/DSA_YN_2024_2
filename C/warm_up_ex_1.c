@@ -33,4 +33,38 @@ Pseudo code:
 
         Return newArr
 
+3.
+
+Function DeleteElement(arr, position):
+    If position < 0 or position >= length of arr:
+        Print "Invalid position"
+        Return arr
+
+    Create a new array `newArr` of size length of arr - 1
+    For i from 0 to position - 1:
+        newArr[i] = arr[i]
+
+    For i from position + 1 to length of arr - 1:
+        newArr[i - 1] = arr[i]
+
+    Return newArr
+
+
+4.
+Function DeleteElement(arr, position):
+    If position < 0 or position >= length of arr:
+        Print "Invalid position"
+        Return arr
+
+    Create a new array `newArr` of size length of arr - 1
+    For i from 0 to position - 1:
+        newArr[i] = arr[i]
+
+    For i from position + 1 to length of arr - 1:
+        newArr[i - 1] = arr[i]
+
+    Return newArr
+
+
+
 */
