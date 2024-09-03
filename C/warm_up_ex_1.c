@@ -65,6 +65,17 @@ Function DeleteElement(arr, position):
 
     Return newArr
 
+5.
+Function FindMaxElement(arr):
+    If length of arr == 0:
+        Print "Array is empty"
+        Return None
+
+    maxElement = arr[0]
+    For i from 1 to length of arr - 1:
+        If arr[i] > maxElement:
+            maxElement = arr[i]
+    Return maxElement
 
 
 */
