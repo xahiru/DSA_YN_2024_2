@@ -6,3 +6,15 @@ Warm up exercise 1
 4: Write a function to search for the first occurrence of an element in an array and return its position.
 5: Write a function that finds and returns the maximum element in an array.
 */
+
+/*
+Pseudo code:
+1.
+    Function InitializeArray():
+        Create an array `arr` of size 10
+        For i from 0 to 9:
+            arr[i] = i + 1
+        Return arr
+
+
+*/
