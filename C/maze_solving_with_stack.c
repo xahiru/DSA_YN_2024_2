@@ -74,6 +74,16 @@ PosType NextPos(PosType pos, int direction) {
     return next;
 }
 
+void PrintMaze(int maze[MAXSIZE][MAXSIZE]) {
+    for (int i = 0; i < MAXSIZE; i++) {
+        for (int j = 0; j < MAXSIZE; j++) {
+            printf("%d ", maze[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
 // MazePath function
 bool MazePath(int maze[MAXSIZE][MAXSIZE], PosType start, PosType end) {
     Stack S;
@@ -89,13 +99,18 @@ bool MazePath(int maze[MAXSIZE][MAXSIZE], PosType start, PosType end) {
             e.step = curstep;
             e.di = 1; // Start with direction East
             Push(&S, e); // Add to path
-            if (curpos.x == end.x && curpos.y == end.y) return true; // Reached end
+            PrintMaze(maze); // Print the maze after each move
+            if (curpos.x == end.x && curpos.y == end.y) {
+                printf("Path found!\n");
+                return true; // Reached end
+            }
             curpos = NextPos(curpos, 1); // Go to next position (East)
             curstep++;
         } else if (!StackEmpty(&S)) {
             Pop(&S, &e); // Backtrack
             while (e.di == 4 && !StackEmpty(&S)) {
                 MarkPrint(maze, e.seat); // Mark as dead end (3)
+                PrintMaze(maze); // Print the maze after marking a dead end
                 Pop(&S, &e);
             }
             if (e.di < 4) { // Try next direction
@@ -106,6 +121,7 @@ bool MazePath(int maze[MAXSIZE][MAXSIZE], PosType start, PosType end) {
         }
     } while (!StackEmpty(&S));
 
+    printf("No path found.\n");
     return false; // No path found
 }
 
@@ -115,7 +131,7 @@ int main() {
         {0, 1, 0, 0, 0, 1, 0, 0, 0, 0},
         {0, 1, 0, 1, 0, 1, 0, 1, 1, 0},
         {0, 0, 0, 1, 0, 0, 0, 0, 1, 0},
-        {1, 1, 0, 1, 1, 1, 1, 0, 1, 0},
+        {1, 1, 1, 1, 0, 1, 1, 0, 1, 0},
         {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
         {0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
         {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
@@ -127,11 +143,7 @@ int main() {
     PosType start = {0, 0}; // Starting position (top-left corner)
     PosType end = {9, 9};   // Ending position (bottom-right corner)
 
-    if (MazePath(maze, start, end)) {
-        printf("Path found!\n");
-    } else {
-        printf("No path found.\n");
-    }
+    MazePath(maze, start, end); // Find and print the path
 
     return 0;
 }
