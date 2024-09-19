@@ -4,7 +4,7 @@
 
 // Structure definition for sqlist
 struct sqlist {
-    int sqlist[MAXSIZE]; // Array to store the list elements
+    int elemlist[MAXSIZE]; // Array to store the list elements
     int size;            // Current size of the list
 };
 
@@ -23,14 +23,14 @@ void get(struct sqlist *p, int i) {
     if (i < 1 || i > p->size) {
         printf("Index out of bounds\n");
     } else {
-        printf("Element at index %d is: %d\n", i, p->sqlist[i - 1]);
+        printf("Element at index %d is: %d\n", i, p->elemlist[i - 1]);
     }
 }
 
 // Function to locate the first occurrence of an element x
 void locate(struct sqlist *p, int x) {
     int i = 0;
-    while (i < p->size && p->sqlist[i] != x) {
+    while (i < p->size && p->elemlist[i] != x) {
         i++;
     }
     if (i == p->size) {
@@ -46,13 +46,13 @@ void insert(struct sqlist *p, int i, int x) {
         printf("Invalid position, cannot insert\n");
     } else {
         for (int j = p->size; j >= i; j--) {
-            p->sqlist[j] = p->sqlist[j - 1];
+            p->elemlist[j] = p->elemlist[j - 1];
         }
-        p->sqlist[i - 1] = x;
+        p->elemlist[i - 1] = x;
         p->size++;
         printf("List after insertion: ");
         for (int j = 0; j < p->size; j++) {
-            printf("%d -> ", p->sqlist[j]);
+            printf("%d -> ", p->elemlist[j]);
         }
         printf("\n");
     }
@@ -64,12 +64,12 @@ void delete(struct sqlist *p, int i) {
         printf("Index out of bounds\n");
     } else {
         for (int j = i - 1; j < p->size - 1; j++) {
-            p->sqlist[j] = p->sqlist[j + 1];
+            p->elemlist[j] = p->elemlist[j + 1];
         }
         p->size--;
         printf("List after deletion: ");
         for (int j = 0; j < p->size; j++) {
-            printf("%d -> ", p->sqlist[j]);
+            printf("%d -> ", p->elemlist[j]);
         }
         printf("\n");
     }
@@ -78,17 +78,17 @@ void delete(struct sqlist *p, int i) {
 // Function to perform insertion sort on the list
 void insertsort(struct sqlist *p) {
     for (int i = 1; i < p->size; i++) {
-        int key = p->sqlist[i];
+        int key = p->elemlist[i];
         int j = i - 1;
-        while (j >= 0 && p->sqlist[j] > key) {
-            p->sqlist[j + 1] = p->sqlist[j];
+        while (j >= 0 && p->elemlist[j] > key) {
+            p->elemlist[j + 1] = p->elemlist[j];
             j--;
         }
-        p->sqlist[j + 1] = key;
+        p->elemlist[j + 1] = key;
     }
     printf("Sorted list: ");
     for (int i = 0; i < p->size; i++) {
-        printf("%d -> ", p->sqlist[i]);
+        printf("%d -> ", p->elemlist[i]);
     }
     printf("\n");
 }
@@ -100,7 +100,7 @@ void display(struct sqlist *p) {
     } else {
         printf("The list: ");
         for (int j = 0; j < p->size; j++) {
-            printf("%d -> ", p->sqlist[j]);
+            printf("%d -> ", p->elemlist[j]);
         }
         printf("\n");
     }
