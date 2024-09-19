@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 class Sqlist {
     private static final int MAX_SIZE = 50; // Define maximum size of the list
-    private int[] sqlist; // Array to store list elements
+    private int[] elemlist; // Array to store list elements
     private int size; // Current number of elements in the list
 
     // Constructor to initialize the list
     public Sqlist() {
-        sqlist = new int[MAX_SIZE];
+        elemlist = new int[MAX_SIZE];
         size = 0;
     }
 
@@ -26,14 +26,14 @@ class Sqlist {
         if (i < 1 || i > size) {
             System.out.println("Index out of bounds");
         } else {
-            System.out.println("Element at index " + i + " is: " + sqlist[i - 1]);
+            System.out.println("Element at index " + i + " is: " + elemlist[i - 1]);
         }
     }
 
     // Locate the first occurrence of an element x
     public void locate(int x) {
         int i = 0;
-        while (i < size && sqlist[i] != x) {
+        while (i < size && elemlist[i] != x) {
             i++;
         }
         if (i == size) {
@@ -49,9 +49,9 @@ class Sqlist {
             System.out.println("Invalid position, cannot insert");
         } else {
             for (int j = size; j >= i; j--) {
-                sqlist[j] = sqlist[j - 1];
+                elemlist[j] = elemlist[j - 1];
             }
-            sqlist[i - 1] = x;
+            elemlist[i - 1] = x;
             size++;
             display();
         }
@@ -63,7 +63,7 @@ class Sqlist {
             System.out.println("Index out of bounds");
         } else {
             for (int j = i - 1; j < size - 1; j++) {
-                sqlist[j] = sqlist[j + 1];
+                elemlist[j] = elemlist[j + 1];
             }
             size--;
             System.out.print("List after deletion: ");
@@ -74,13 +74,13 @@ class Sqlist {
     // Perform insertion sort on the list
     public void insertSort() {
         for (int i = 1; i < size; i++) {
-            int key = sqlist[i];
+            int key = elemlist[i];
             int j = i - 1;
-            while (j >= 0 && sqlist[j] > key) {
-                sqlist[j + 1] = sqlist[j];
+            while (j >= 0 && elemlist[j] > key) {
+                elemlist[j + 1] = elemlist[j];
                 j--;
             }
-            sqlist[j + 1] = key;
+            elemlist[j + 1] = key;
         }
         System.out.print("Sorted list: ");
         display();
@@ -92,7 +92,7 @@ class Sqlist {
             System.out.println("The list is empty");
         } else {
             for (int j = 0; j < size; j++) {
-                System.out.print(sqlist[j] + (j < size - 1 ? " -> " : ""));
+                System.out.print(elemlist[j] + (j < size - 1 ? " -> " : ""));
             }
             System.out.println();
         }
