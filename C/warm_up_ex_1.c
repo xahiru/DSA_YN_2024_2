@@ -81,3 +81,96 @@ Function FindMaxElement(arr):
 */
 
 // TODO: Implement the above pseudo code in C language
+#include <stdio.h>
+
+#define MAX_SIZE 100  // Define maximum size of the array
+
+// Function to initialize an array with values 1 to 10
+void InitializeArray(int arr[], int *size) {
+    *size = 10;  // Initialize size to 10
+    for (int i = 0; i < *size; i++) {
+        arr[i] = i + 1;
+    }
+}
+
+// Function to insert an element into the array at a given position
+void InsertElement(int arr[], int *size, int element, int position) {
+    if (position < 0 || position > *size || *size >= MAX_SIZE) {
+        printf("Invalid position or array full\n");
+        return;
+    }
+
+    // Shift elements to the right to make space for the new element
+    for (int i = *size; i > position; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    // Insert the new element at the desired position
+    arr[position] = element;
+    (*size)++;  // Increment size of the array
+}
+
+// Function to delete an element from the array at a given position
+void DeleteElement(int arr[], int *size, int position) {
+    if (position < 0 || position >= *size) {
+        printf("Invalid position\n");
+        return;
+    }
+
+    // Shift elements to the left to fill the gap left by the deleted element
+    for (int i = position; i < *size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
+    (*size)--;  // Decrement size of the array
+}
+
+// Function to find the maximum element in the array
+int FindMaxElement(int arr[], int size) {
+    if (size == 0) {
+        printf("Array is empty\n");
+        return -1;
+    }
+
+    int maxElement = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > maxElement) {
+            maxElement = arr[i];
+        }
+    }
+    return maxElement;
+}
+
+// Function to display the elements of the array
+void DisplayArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[MAX_SIZE];  // Array with a fixed size
+    int size;
+
+    // Initialize array
+    InitializeArray(arr, &size);
+    printf("Initial array: ");
+    DisplayArray(arr, size);
+
+    // Insert element
+    InsertElement(arr, &size, 99, 5);
+    printf("Array after insertion: ");
+    DisplayArray(arr, size);
+
+    // Delete element
+    DeleteElement(arr, &size, 3);
+    printf("Array after deletion: ");
+    DisplayArray(arr, size);
+
+    // Find max element
+    int max = FindMaxElement(arr, size);
+    printf("Maximum element in the array: %d\n", max);
+
+    return 0;
+}
