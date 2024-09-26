@@ -81,5 +81,37 @@ int main() {
     printf("After dequeue, queue elements: ");
     display(q);
     
+    int choice;
+    int x;
+
+    while (1)
+    {
+        printf("\nPerform operations on the stack:");
+        printf("\n1.Enqueue the element\n2.Dequeue the element\n3.Show\n4.End");
+        printf("\n\nEnter the choice: ");
+        scanf("%d", &choice);
+        fflush(stdin);
+
+        switch (choice)
+        {
+        case 1:
+            printf("\nEnter the element to be enqued into the queue: ");
+            scanf("%d", &x);
+            enqueue(q, x);
+            break;
+        case 2:
+            dequeue(q);
+            break;
+        case 3:
+            display(q);
+            break;
+        case 4:
+            exit(0);
+
+        default:
+            printf("\nInvalid choice!!");
+        }
+    }
+    
     return 0;
 }
