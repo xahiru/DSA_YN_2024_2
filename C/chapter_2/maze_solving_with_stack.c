@@ -77,9 +77,9 @@ PosType NextPos(PosType pos, int direction) {
 void PrintMaze(int maze[MAXSIZE][MAXSIZE]) {
     for (int i = 0; i < MAXSIZE; i++) {
         for (int j = 0; j < MAXSIZE; j++) {
-            // if (maze[i][j] == 2) printf("x ");
-            // else if (maze[i][j] == 3) printf("b ");
-            // else     
+            if (maze[i][j] == 2) printf("x ");
+            else if (maze[i][j] == 3) printf("b ");
+            else     
             printf("%d ", maze[i][j]);
         }
         printf("\n");
@@ -136,7 +136,7 @@ int main() {
         {0, 0, 0, 1, 0, 0, 0, 0, 1, 0},
         {1, 1, 1, 1, 0, 1, 1, 0, 1, 0},
         {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-        {0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+        {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
         {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
         {0, 1, 1, 0, 1, 1, 1, 1, 1, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
