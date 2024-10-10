@@ -25,7 +25,22 @@ Student ID, Student name, Age and add the following sample data
 20240004, Rishmy, 20
 
 
-4. Write a program in C to create a singly linked list of n nodes and display it in reverse order.
+
+4. Write a program in C to create and display a Singly Linked List.
+Test Data :
+Input the number of nodes : 3
+Input data for node 1 : 5
+Input data for node 2 : 6
+Input data for node 3 : 7
+Expected Output :
+
+ Data entered in the list :                                                                                   
+ Data = 5                                                                                                     
+ Data = 6                                                                                                     
+ Data = 7 
+
+
+5. Write a program in C to create a singly linked list of n nodes and display it in reverse order.
 Test Data :
 Input the number of nodes : 3
 Input data for node 1 : 5
@@ -44,7 +59,7 @@ Expected Output :
  Data = 5 
 
 
-5. Write a program in C to insert a new node at the beginning of a Singly Linked List.
+6. Write a program in C to insert a new node at the beginning of a Singly Linked List.
 Test Data and Expected Output :
 
  Input the number of nodes : 3                                                                                
@@ -67,7 +82,7 @@ Test Data and Expected Output :
 
 
 
-5. Write a program in C to insert a new node at the end of a Singly Linked List.
+7. Write a program in C to insert a new node at the end of a Singly Linked List.
 Test Data and Expected Output :
 
 Input the number of nodes : 3                                                                                
