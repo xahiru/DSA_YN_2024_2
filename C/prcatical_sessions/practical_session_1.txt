@@ -104,7 +104,7 @@ Input the number of nodes : 3
  Data = 8  
 
 
- 18. Write a C program to create a copy of a singly linked list with random pointers.
+ 8. Write a C program to create a copy of a singly linked list with random pointers.
 Test Data and Expected Output :
 
 Original singly list:
