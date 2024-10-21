@@ -108,3 +108,6 @@ replay_pid*
 *.exe
 *.out
 *.app
+C/.DS_Store
+.DS_Store
+.vscode/settings.json
