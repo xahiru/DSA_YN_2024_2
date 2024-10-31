@@ -1,0 +1,113 @@
+questions taken from https://www.w3resource.com/c-programming-exercises/stack/index.php
+Session 4
+1.Write a C program to implement a stack using an array with push and pop operations.
+Expected Output:
+
+Elements in the stack are: 3 5 4 3 2 1 
+
+
+2. Write a C program to implement a stack using a singly linked list.
+Expected Output:
+
+ Push data 1
+ Push data 2
+ Push data 3
+ Push data 4
+
+ Pop data: 4
+ Pop data: 3
+ Pop data: 2
+ Pop data: 1
+
+ Check a stack is empty or not?
+ Stack is empty!
+
+
+ 4. Write a C program that accepts a string and reverse it using a stack.
+Expected Output:
+
+Input a string: w3resource
+ Reversed string using a stack is: ecruoser3w
+
+
+ 8. Write a C program to find the next greater element for each element in an array using a stack. Return -1 if there is no next-larger element.
+Expected Output:
+
+Elements in the array are: 1 2 3 4 5 6
+The next larger elements are:
+1 --> 2
+2 --> 3
+3 --> 4
+4 --> 5
+5 --> 6
+6 --> -1
+
+Elements in the array are: 6 5 4 3 2 1 0
+The next larger elements are:
+0 --> -1
+1 --> -1
+2 --> -1
+3 --> -1
+4 --> -1
+5 --> -1
+6 --> -1
+
+Elements in the array are: 3 7 5 9 3 2 4 1 4
+The next larger elements are:
+3 --> 7
+5 --> 9
+7 --> 9
+2 --> 4
+3 --> 4
+1 --> 4
+4 --> -1
+9 --> -1
+
+
+11. Write a C program to find the minimum element in a stack.
+Expected Output:
+
+Current stack elements:
+9 2 4 2 4 
+Minimum element: 2
+
+After removing two elements:
+Current stack elements:
+9 2 4 
+Minimum element: 2
+
+After adding one element:
+Current stack elements:
+9 2 4 1 
+Minimum element: 1
+
+12. Write a C program to find the maximum element in a stack.
+Expected Output:
+
+Current stack elements:
+5 2 1 6 8 
+Maximum element: 8
+
+After removing two elements:
+Current stack elements:
+5 2 1 
+Maximum element: 5
+
+After adding one element:
+Current stack elements:
+5 2 1 10 
+Maximum element: 10
+
+
+14. Write a C program to calculate the average value of the stack elements.
+Expected Output:
+
+Elements of the stack:
+6 4 2 5 3 1 
+Average of the said stack values: 3.50
+
+Popped value: 6
+
+Elements of the stack:
+4 2 5 3 1 
+Average of the said stack values: 3.00
