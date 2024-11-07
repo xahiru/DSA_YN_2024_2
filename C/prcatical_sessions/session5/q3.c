@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+// https://www.w3resource.com/c-programming-exercises/queue/c-queue-exercise-3.php
+
 // Define a structure for a node in the queue
 struct Node {
    int data;
