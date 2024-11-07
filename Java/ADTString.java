@@ -41,15 +41,23 @@ class ADTString {
         this.length = 0;
     }
 
-    // Concatenates two ADTStrings and returns a new ADTString
     public ADTString concat(ADTString s) {
         ADTString result = new ADTString();
-        result.length = this.length + s.length;
+    
+        // Handle null cases for both strings
+        int thisLength = (this.ch != null) ? this.length : 0;
+        int sLength = (s.ch != null) ? s.length : 0;
+    
+        result.length = thisLength + sLength;
         result.ch = new char[result.length];
-
-        System.arraycopy(this.ch, 0, result.ch, 0, this.length);
-        System.arraycopy(s.ch, 0, result.ch, this.length, s.length);
-
+    
+        if (this.ch != null) {
+            System.arraycopy(this.ch, 0, result.ch, 0, thisLength);
+        }
+        if (s.ch != null) {
+            System.arraycopy(s.ch, 0, result.ch, thisLength, sLength);
+        }
+    
         return result;
     }
 
