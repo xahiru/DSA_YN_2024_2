@@ -111,3 +111,4 @@ replay_pid*
 C/.DS_Store
 .DS_Store
 .vscode/settings.json
+.vscode/tasks.json
