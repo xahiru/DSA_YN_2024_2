@@ -4,3 +4,13 @@ Dequeued: 10
 Queue: 20 30 40 
 Front element: 20
 Queue is empty!
+
+
+Q2: Design a Printer Queue Simulation (Queue with Linked List)
+Task: Simulate a printer queue system in a printing department. You are tasked with managing print jobs using a queue. A print job has a document name and the number of pages to print. Implement the queue using a linked list and the following operations:
+
+addJob(): Add a new print job to the queue.
+processJob(): Process the next job in the queue (print it and remove it).
+viewNextJob(): View the next job to be printed.
+isQueueEmpty(): Check if the queue is empty.
+
