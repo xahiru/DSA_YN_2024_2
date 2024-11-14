@@ -19,3 +19,11 @@ Task: Design a system where the user can perform actions (like writing text in a
 
 performAction(): Record an action.
 undoAction(): Undo the last action.
+
+q4: Queue for Order Processing (Queue with Array)
+Task: You are working in an online store that processes orders. Each order contains an order ID and the amount of money for that order. Implement a queue to manage order processing where:
+
+placeOrder(): Place an order in the queue.
+processOrder(): Process the next order in the queue.
+viewOrder(): View the first order in the queue.
+isQueueEmpty(): Check if the queue is empty.
