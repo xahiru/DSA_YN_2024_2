@@ -14,3 +14,8 @@ processJob(): Process the next job in the queue (print it and remove it).
 viewNextJob(): View the next job to be printed.
 isQueueEmpty(): Check if the queue is empty.
 
+q3: Implement a Stack for Undo Functionality (Stack with Array)
+Task: Design a system where the user can perform actions (like writing text in a text editor) and undo the last action. Implement the undo functionality using a stack, where each operation is stored in the stack and can be undone by popping from the stack.
+
+performAction(): Record an action.
+undoAction(): Undo the last action.
