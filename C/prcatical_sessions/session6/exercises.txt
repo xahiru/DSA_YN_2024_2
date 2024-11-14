@@ -27,3 +27,18 @@ placeOrder(): Place an order in the queue.
 processOrder(): Process the next order in the queue.
 viewOrder(): View the first order in the queue.
 isQueueEmpty(): Check if the queue is empty.
+
+
+q5: Balanced Parentheses Checker (Stack with Array)
+Task: Implement a program that checks if the parentheses in a string are balanced. For this problem, you should use a stack. The program must handle:
+
+Opening parentheses (, {, [.
+Closing parentheses ), }, ].
+Return 1 if balanced, otherwise return 0.
+
+q6: Merge Two Sorted Lists (Linked List)
+Task: Merge two sorted linked lists into a single sorted linked list. Both input lists are already sorted, and you need to maintain the sorted order after merging them.
+
+mergeLists(): Merge two sorted linked lists into a new sorted list.
+
+q7. Write a C program that uses stack to chaange numbers from base 10 base 3
