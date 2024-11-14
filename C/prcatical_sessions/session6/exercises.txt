@@ -1,1 +1,6 @@
 1. Implement Queue using linked list
+Queue: 10 20 30 40 
+Dequeued: 10
+Queue: 20 30 40 
+Front element: 20
+Queue is empty!
