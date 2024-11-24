@@ -124,3 +124,7 @@ abcdc
 
 40a.
 Write a C program to get LPS array from a given spring
+
+Output:
+LPS array for the string "ababaca":
+0 0 1 2 3 0 1
