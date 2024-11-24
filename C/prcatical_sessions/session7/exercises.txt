@@ -80,3 +80,13 @@ Expected Output :
 Number of Alphabets in the string is : 21 
 Number of Digits in the string is : 1 
 Number of Special characters in the string is : 4
+
+11. Write a C program to sort a string array in ascending order.
+
+Test Data :
+Input the string : w3resource
+
+Expected Output :
+
+After sorting the string appears like : 
+3ceeorrsuw 
