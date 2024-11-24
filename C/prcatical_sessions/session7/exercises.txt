@@ -1,0 +1,11 @@
+https://www.w3resource.com/c-programming-exercises/string/index.php
+
+1. Write a program in C to input a string and print it.
+
+Test Data :
+Input the string : Welcome, w3resource
+
+Expected Output :
+
+The string you entered is : Welcome, w3resource
+
