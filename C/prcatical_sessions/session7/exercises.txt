@@ -108,3 +108,16 @@ Expected Output:
 
 Original string: abcdcsdfabbccb
 Longest Palindromic Substring from the said string? bccb
+
+
+40x.
+Write a C pogram to dispaly all the substrings from a given string
+
+Expected Output:
+
+Original string: abcdc
+a
+ab
+abc
+abcd
+abcdc 
