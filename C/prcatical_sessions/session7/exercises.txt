@@ -121,3 +121,6 @@ ab
 abc
 abcd
 abcdc 
+
+40a.
+Write a C program to get LPS array from a given spring
