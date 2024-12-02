@@ -10,13 +10,24 @@
     stroke-width: 1;
     fill: black;
 }
+#divAnim {
+    border: solid black 1px;
+    display: inline-block;
+    padding: 20px;
+}
+/* #divAnim #wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+} */
+
     </style>
 </head>
 <body>
     <h1>Trees</h1>
     Taken from <a href="https://www.w3schools.com/dsa/dsa_theory_trees.php">w3schools</a>
     
-    <div id="divAnim" style="height: 600px; width: 600px;">
+    <div id="divAnim" style="height: 800px; width: 800px;">
         <div id="wrapper">
           <div id="menu">
           <p><label><input type="radio" value="all" name="rbgTree" checked="" onchange="showTree(this.value)">The whole tree</label></p>
@@ -29,7 +40,7 @@
           <p><label><input type="radio" value="height" name="rbgTree" onchange="showTree(this.value)">Tree height (h=2)</label></p>
           <p><label><input type="radio" value="nodes" name="rbgTree" onchange="showTree(this.value)">Tree size (n=10)</label></p>
           </div>
-          <div id="svgDiv">
+          <div id="svgDiv" >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" id="svgAnim">
       <defs>
         <marker
