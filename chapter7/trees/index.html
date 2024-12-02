@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees</title>
+    <style>
+        .branch {
+    stroke: black;
+    stroke-width: 1;
+    fill: black;
+}
+    </style>
+</head>
+<body>
+    <div id="divAnim" style="height: 600px; width: 600px;">
+        <div id="wrapper">
+          <div id="menu">
+          <p><label><input type="radio" value="all" name="rbgTree" checked="" onchange="showTree(this.value)">The whole tree</label></p>
+          <p><label><input type="radio" value="root" name="rbgTree" onchange="showTree(this.value)">Root node</label></p>
+          <p><label><input type="radio" value="branches" name="rbgTree" onchange="showTree(this.value)">Edges</label></p>
+          <p><label><input type="radio" value="nodes" name="rbgTree" onchange="showTree(this.value)">Nodes</label></p>
+          <p><label><input type="radio" value="leaves" name="rbgTree" onchange="showTree(this.value)">Leaf nodes</label></p>
+          <p><label><input type="radio" value="children" name="rbgTree" onchange="showTree(this.value)">Child nodes</label></p>
+          <p><label><input type="radio" value="parents" name="rbgTree" onchange="showTree(this.value)">Parent nodes</label></p>
+          <p><label><input type="radio" value="height" name="rbgTree" onchange="showTree(this.value)">Tree height (h=2)</label></p>
+          <p><label><input type="radio" value="nodes" name="rbgTree" onchange="showTree(this.value)">Tree size (n=10)</label></p>
+          </div>
+          <div id="svgDiv">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" id="svgAnim">
+      <defs>
+        <marker
+    id="arrowhead"
+    markerWidth="10"
+    markerHeight="7"
+    refX="10"
+    refY="3.5"
+    orient="auto">
+    <path d="M 0 0 L 10 3.5 L 0 7" fill="none" stroke="black" stroke-width="1" />
+  </marker>
+      
+        <style>
+          
+        </style>
+      </defs>
+        <!-- 'R' node -->
+        <g class="root parent">
+          <circle cx="170" cy="30" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="164" y="37" class="svgDataText" style="opacity: 1;">R</text>
+          <line x1="155" y1="45" x2="101" y2="100" class="branch height" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="170" y1="50" x2="170" y2="91" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="185" y1="45" x2="250" y2="100" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+        </g>
+      
+        <!-- 'A' node -->
+        <g class="parent child">
+          <circle cx="80" cy="120" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="73" y="126" class="svgDataText" style="opacity: 1;">A</text>
+          <line x1="70" y1="138" x2="50" y2="180" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="90" y1="138" x2="110" y2="180" class="branch height" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+        </g>
+        <!-- 'B' node -->
+        <g class="child leaf">
+          <circle cx="170" cy="120" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="164" y="126" class="svgDataText" style="opacity: 1;">B</text>
+        </g>
+        <!-- 'C' node -->
+        <g class="parent child">
+          <circle cx="271" cy="120" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="265" y="126" class="svgDataText" style="opacity: 1;">C</text>
+          <line x1="261" y1="138" x2="228" y2="183" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="271" y1="140" x2="271" y2="178" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="281" y1="138" x2="316" y2="183" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+          <line x1="286" y1="134" x2="369" y2="189" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+        </g>
+      
+        <!-- 'D' node -->
+        <g class="child leaf">
+          <circle cx="41" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="35" y="213" class="svgDataText" style="opacity: 1;">D</text>
+        </g>
+      
+        <!-- 'E' node -->
+        <g class="child leaf">
+          <circle cx="121" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="115" y="213" class="svgDataText" style="opacity: 1;">E</text>
+        </g>
+      
+        <!-- 'F' node -->
+        <g class="child leaf">
+          <circle cx="211" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="205" y="213" class="svgDataText" style="opacity: 1;">F</text>
+        </g>
+      
+        <!-- 'G' node -->
+        <g class="child leaf">
+          <circle cx="271" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="265" y="213" class="svgDataText" style="opacity: 1;">G</text>
+        </g>
+      
+        <!-- 'H' node -->
+        <g class="child leaf">
+          <circle cx="331" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="325" y="213" class="svgDataText" style="opacity: 1;">H</text>
+        </g>
+      
+        <!-- 'I' node -->
+        <g class="child leaf">
+          <circle cx="391" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="385" y="213" class="svgDataText" style="opacity: 1;">I</text>
+        </g>
+      </svg></div>
+        </div>
+      </div>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let root = document.querySelectorAll('#divAnim .root circle, #divAnim .root text');
+        let branches = document.querySelectorAll('#divAnim line');
+        let nodes = document.querySelectorAll('#divAnim circle, #divAnim text');
+        let leaves = document.querySelectorAll('#divAnim .leaf circle, #divAnim .leaf text');
+        let children = document.querySelectorAll('#divAnim .child circle, #divAnim .child text');
+        let parents = document.querySelectorAll('#divAnim .parent circle, #divAnim .parent text');
+        let height = document.querySelectorAll('#divAnim .height');
+        
+        
+      
+        function dimMany(dim,what){
+          let thisOpacity = '1';
+          if(dim){
+            thisOpacity = '0.2';
+          }
+      
+          if(what==='all') {
+            for(let i=0; i<nodes.length; i++){
+              nodes[i].style.opacity=thisOpacity;
+            }
+            for(let i=0; i<branches.length; i++){
+              branches[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='root'){
+            for(let i=0; i<root.length; i++){
+              root[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='branches') {
+            for(let i=0; i<branches.length; i++){
+              branches[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='nodes'){
+            for(let i=0; i<nodes.length; i++){
+              nodes[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='leaves'){
+            for(let i=0; i<leaves.length; i++){
+              leaves[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='children'){
+            for(let i=0; i<children.length; i++){
+              children[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='parents'){
+            for(let i=0; i<parents.length; i++){
+              parents[i].style.opacity=thisOpacity;
+            }
+          }
+          else if(what==='height'){
+            for(let i=0; i<height.length; i++){
+              height[i].style.opacity=thisOpacity;
+            }
+          }
+        }
+      
+        function showTree(part){
+          //console.log(part);
+          dimMany(true,'all');
+          dimMany(false,part);
+        }
+      </script>
+</body>
+</html>
