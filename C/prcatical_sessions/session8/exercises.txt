@@ -138,3 +138,13 @@ It is usually considered that when e≦0.05, it is called a sparse matrix.
    }tripletable;
 
 5x. add a function to 4x to display matrix before and after transpose
+
+6x. change 5x to user the following alogrithm (fast transpose):
+    Algorithm Steps:
+        Initial Setup (First Pass):
+        Traverse all non-zero elements of the matrix for the first time.
+        Record the count of non-zero elements in each column into an array num[].
+        Use num[] to calculate the starting position of each column in the transposed matrix and store it in cpot[].
+        Second Pass (Transposing):
+        Traverse all non-zero elements of the matrix again.
+        Use the information in cpot[] to directly place each non-zero element of the original matrix into its transposed position.
