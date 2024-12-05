@@ -118,3 +118,8 @@ The matrix is :
 0 1 0
 0 0 1
 The matrix is an identity matrix.
+
+3x. write a c program with a function to calculate the sparcity of a matrix 
+as follows:Suppose there are s non-zero elements in the matrix A. Let e=s/(m*n),
+and e is called the sparse factor of the matrix. 
+It is usually considered that when e≦0.05, it is called a sparse matrix.
