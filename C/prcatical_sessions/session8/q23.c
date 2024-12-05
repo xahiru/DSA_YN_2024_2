@@ -1,3 +1,18 @@
+// https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-23.php
+// Find sum of right diagonals of a matrix :                                                                     
+// ---------------------------------------                                                                       
+// Input the size of the square matrix : 2                                                                       
+// Input elements in the first matrix :                                                                          
+// element - [0],[0] : 1                                                                                         
+// element - [0],[1] : 2                                                                                         
+// element - [1],[0] : 3                                                                                         
+// element - [1],[1] : 4                                                                                         
+// The matrix is :                                                                                               
+//    1   2                                                                                                      
+//    3   4                                                                                                      
+// Addition of the right Diagonal elements is :5
+
+
 #include <stdio.h>
 
 int main() {
