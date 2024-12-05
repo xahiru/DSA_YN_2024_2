@@ -1,5 +1,9 @@
-1x. Given a 2-dimensional array A[4][5] stored in row-major order with a base address of 1000 and an element size of 4 bytes, 
+1x. Given a 2-dimensional array A[4][5] stored in row-major order with a 
+base address of 1000 and an element size of 4 bytes, 
 write a c program that finds the address of element A[2][3].
+
+2x.write a c program that takes any array dimensions size of elements 
+and base address and stored in row-major order outputs address of a given index
 
 22. Write a program in C to find the transpose of a given matrix.
 Test Data :
