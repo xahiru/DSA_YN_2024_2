@@ -11,7 +11,7 @@
     fill: black;
 }
 #divAnim {
-    border: solid black 1px;
+    /* border: solid black 1px; */
     display: inline-block;
     padding: 20px;
 }
@@ -41,89 +41,101 @@
           <p><label><input type="radio" value="nodes" name="rbgTree" onchange="showTree(this.value)">Tree size (n=10)</label></p>
           </div>
           <div id="svgDiv" >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" id="svgAnim">
-      <defs>
-        <marker
-    id="arrowhead"
-    markerWidth="10"
-    markerHeight="7"
-    refX="10"
-    refY="3.5"
-    orient="auto">
-    <path d="M 0 0 L 10 3.5 L 0 7" fill="none" stroke="black" stroke-width="1" />
-  </marker>
-      
-        <style>
-          
-        </style>
-      </defs>
-        <!-- 'R' node -->
-        <g class="root parent">
-          <circle cx="170" cy="30" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="164" y="37" class="svgDataText" style="opacity: 1;">R</text>
-          <line x1="155" y1="45" x2="101" y2="100" class="branch height" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="170" y1="50" x2="170" y2="91" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="185" y1="45" x2="250" y2="100" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 320">
+              <defs>
+          <marker id="arrowheadRA" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadAC" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadAD" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadRB" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadBE" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadBF" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+          <marker id="arrowheadFG" class="arrowhead" markerWidth="8" markerHeight="14" refX="0" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+              <line x1="0.5" y1="0.5" x2="7.5" y2="7.5" stroke-width="1.5" style="opacity: 1;"></line>
+              <line x1="0" y1="7" x2="6" y2="7" stroke-width="1" style="opacity: 1;"></line>
+              <line x1="0.5" y1="13.5" x2="7.5" y2="6.5" stroke-width="1.5" style="opacity: 1;"></line>
+          </marker>
+        </defs>
+        
+          <!-- 'R' node -->
+          <g class="root parent R" style="opacity: 1;">
+            <circle cx="170" cy="30" r="20" class="node" style="opacity: 1;"></circle>
+            <text x="164" y="37" class="svgDataText" style="opacity: 1;">R</text>
+          </g>
+        
+          <!-- 'A' node -->
+          <g class="parent child A" style="opacity: 1;">
+            <line x1="155" y1="45" x2="101" y2="100" class="branch" marker-end="url(#arrowheadRA)" style="opacity: 1;"></line>
+            <circle cx="80" cy="120" r="20" class="node" style="opacity: 1;"></circle>
+            <text x="73" y="126" class="svgDataText" style="opacity: 1;">A</text>
+          </g>
+          <!-- 'B' node -->
+          <g class="parent child B" style="opacity: 1;">
+            <line x1="185" y1="45" x2="250" y2="100" class="branch height" marker-end="url(#arrowheadRB)" style="opacity: 1;"></line>
+            <circle cx="271" cy="120" r="20" class="node" style="opacity: 1;"></circle>
+            <text x="265" y="126" class="svgDataText" style="opacity: 1;">B</text>
+          </g>
+        
+          <!-- 'C' node -->
+          <g class="child leaf C" style="opacity: 1;">
+            <line x1="70" y1="138" x2="50" y2="180" class="branch" marker-end="url(#arrowheadAC)" start="A" end="C" style="opacity: 1;"></line>
+            <circle cx="41" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+            <text x="35" y="213" class="svgDataText" style="opacity: 1;">C</text>
+          </g>
+        
+          <!-- 'D' node -->
+          <g class="child leaf D" style="opacity: 1;">
+            <line x1="90" y1="138" x2="110" y2="180" class="branch" marker-end="url(#arrowheadAD)" style="opacity: 1;"></line>
+            <circle cx="121" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+            <text x="115" y="213" class="svgDataText" style="opacity: 1;">D</text>
+          </g>
+        
+          <!-- 'E' node -->
+        <g class="child leaf E" style="opacity: 1;">
+        <line x1="261" y1="138" x2="241" y2="180" class="branch" marker-end="url(#arrowheadBE)" style="opacity: 1;"></line>
+          <circle cx="232" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="226" y="213" class="svgDataText" style="opacity: 1;">E</text>
         </g>
-      
-        <!-- 'A' node -->
-        <g class="parent child">
-          <circle cx="80" cy="120" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="73" y="126" class="svgDataText" style="opacity: 1;">A</text>
-          <line x1="70" y1="138" x2="50" y2="180" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="90" y1="138" x2="110" y2="180" class="branch height" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-        </g>
-        <!-- 'B' node -->
-        <g class="child leaf">
-          <circle cx="170" cy="120" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="164" y="126" class="svgDataText" style="opacity: 1;">B</text>
-        </g>
-        <!-- 'C' node -->
-        <g class="parent child">
-          <circle cx="271" cy="120" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="265" y="126" class="svgDataText" style="opacity: 1;">C</text>
-          <line x1="261" y1="138" x2="228" y2="183" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="271" y1="140" x2="271" y2="178" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="281" y1="138" x2="316" y2="183" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-          <line x1="286" y1="134" x2="369" y2="189" class="branch" marker-end="url(#arrowhead)" style="opacity: 1;"></line>
-        </g>
-      
-        <!-- 'D' node -->
-        <g class="child leaf">
-          <circle cx="41" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="35" y="213" class="svgDataText" style="opacity: 1;">D</text>
-        </g>
-      
-        <!-- 'E' node -->
-        <g class="child leaf">
-          <circle cx="121" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="115" y="213" class="svgDataText" style="opacity: 1;">E</text>
-        </g>
-      
+        
         <!-- 'F' node -->
-        <g class="child leaf">
-          <circle cx="211" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="205" y="213" class="svgDataText" style="opacity: 1;">F</text>
+        <g class="child parent leaf F" style="opacity: 1;">
+          <line x1="281" y1="138" x2="301" y2="180" class="branch height" marker-end="url(#arrowheadBF)" style="opacity: 1;"></line>
+          <circle cx="312" cy="207" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="306" y="213" class="svgDataText" style="opacity: 1;">F</text>
         </g>
-      
+        
         <!-- 'G' node -->
-        <g class="child leaf">
-          <circle cx="271" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="265" y="213" class="svgDataText" style="opacity: 1;">G</text>
+        <g class="child leaf G" style="opacity: 1;">
+          <line x1="302" y1="225" x2="282" y2="267" class="branch height" marker-end="url(#arrowheadFG)" style="opacity: 1;"></line>
+          <circle cx="271" cy="293" r="20" class="node" style="opacity: 1;"></circle>
+          <text x="265" y="299" class="svgDataText" style="opacity: 1;">G</text>
         </g>
-      
-        <!-- 'H' node -->
-        <g class="child leaf">
-          <circle cx="331" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="325" y="213" class="svgDataText" style="opacity: 1;">H</text>
-        </g>
-      
-        <!-- 'I' node -->
-        <g class="child leaf">
-          <circle cx="391" cy="207" r="20" class="node" style="opacity: 1;"></circle>
-          <text x="385" y="213" class="svgDataText" style="opacity: 1;">I</text>
-        </g>
-      </svg></div>
+        </svg>
+          </div>
         </div>
       </div>
       
